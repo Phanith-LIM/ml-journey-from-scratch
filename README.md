@@ -1,2 +1,4 @@
-# ml-journey-from-scratch
-🚀 A hands-on journey into Machine Learning from the ground up! This repository covers fundamental ML concepts, algorithms, and implementations without relying on high-level libraries like Scikit-learn or TensorFlow. Ideal for learners who want to understand the inner workings of ML models by coding them from scratch.
+# ML Journey from Scratch 🚀 
+
+Welcome to **ML Journey from Scratch**, a hands-on guide to building machine learning models from the ground up! This repository aims to help you understand the core principles behind ML by implementing algorithms without relying on high-level libraries like Scikit-learn or TensorFlow.  
+date: Tue, 6 Feb 2025
