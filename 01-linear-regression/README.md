@@ -96,6 +96,7 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 #### 1. Mean Squared Error (MSE)
 
 **Formula:**
+
 $$
 \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_{\text{true},i} - y_{\text{pred},i} \right)^2
 $$
@@ -112,6 +113,7 @@ $$
 #### 2. Root Mean Squared Error (RMSE)
 
 **Formula:**
+
 $$
 \text{RMSE} = \sqrt{\text{MSE}}
 $$
@@ -127,6 +129,7 @@ $$
 #### 3. R-squared ($R^2$)
 
 **Formula:**
+
 $$
 R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
 $$
