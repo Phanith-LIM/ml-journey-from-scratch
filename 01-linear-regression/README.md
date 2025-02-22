@@ -86,9 +86,7 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 #### 1. Mean Squared Error (MSE)
 
 **Formula:**
-
-$$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_{\text{true}_i} - y_{\text{pred}_i} \right)^2
-$$
+$$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2$$
 
 **Description:**
 - **Mean Squared Error (MSE)** is a widely used metric for evaluating the accuracy of regression models.
