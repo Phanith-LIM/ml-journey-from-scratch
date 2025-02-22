@@ -97,7 +97,7 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 
 **Formula:**
 $$
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true},i} - y_{\text{pred},i})^2
 $$
 
 **Description:**
