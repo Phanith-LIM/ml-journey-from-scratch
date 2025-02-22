@@ -2,7 +2,9 @@
 
 Linear regression is a fundamental model in machine learning used for predicting a continuous output variable based on input features. The model function for linear regression is represented as:
 
-$$f_{w,b}(x) = wx + b$$
+$$
+f_{w,b}(x) = wx + b
+$$
 
 In this equation, $f_{w,b}(x)$ represents the predicted output, $w$ is the weight parameter, $b$ is the bias parameter, and $x$ is the input feature.
 
@@ -20,7 +22,9 @@ The forward pass is a step where we compute the linear regression output for the
 
 The cost function is used to measure how well our model is performing. It quantifies the difference between the predicted values and the actual values in our dataset. The cost function is defined as:
 
-$$J(w,b) = \frac{1}{2m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})^2$$
+$$
+J(w,b) = \frac{1}{2m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})^2
+$$
 
 Here, $J(w, b)$ is the cost, $m$ is the number of training examples, $x^{(i)}$ is the input data for the $i$-th example, $y^{(i)}$ is the actual output for the $i$-th example, and $w$ and $b$ are the weight and bias parameters, respectively.
 
@@ -40,9 +44,13 @@ $$
 
 The training process involves iteratively updating the weights and biases to minimize the cost function. This is typically done through an optimization algorithm like gradient descent. The update equations for parameters are:
 
-$$w \leftarrow w - \alpha \frac{\partial J}{\partial w}$$
+$$
+w \leftarrow w - \alpha \frac{\partial J}{\partial w}
+$$
 
-$$b \leftarrow b - \alpha \frac{\partial J}{\partial b}$$
+$$
+b \leftarrow b - \alpha \frac{\partial J}{\partial b}
+$$
 
 Here, $\alpha$ represents the learning rate, which controls the step size during parameter updates.
 
@@ -75,7 +83,9 @@ The standardization process involves the following steps:
 
 Mathematically, the standardized value for a feature `x` in a dataset is calculated as:
 
-$$\text{Standardized value} = \frac{x - \mu}{\sigma}$$
+$$
+\text{Standardized value} = \frac{x - \mu}{\sigma}
+$$
 
 Here, `x` is the original value of the feature, $\mu$ is the mean of the feature, and $\sigma$ is the standard deviation of the feature.
 
@@ -86,7 +96,9 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 #### 1. Mean Squared Error (MSE)
 
 **Formula:**
-$$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2$$
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2
+$$
 
 **Description:**
 - **Mean Squared Error (MSE)** is a widely used metric for evaluating the accuracy of regression models.
@@ -100,7 +112,9 @@ $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i}
 #### 2. Root Mean Squared Error (RMSE)
 
 **Formula:**
-$$\text{RMSE} = \sqrt{\text{MSE}}$$
+$$
+\text{RMSE} = \sqrt{\text{MSE}}
+$$
 
 **Description:**
 - **Root Mean Squared Error (RMSE)** is a variant of MSE that provides the square root of the average squared difference between predicted and actual values.
@@ -113,7 +127,9 @@ $$\text{RMSE} = \sqrt{\text{MSE}}$$
 #### 3. R-squared ($R^2$)
 
 **Formula:**
-$$R^2 = 1 - \frac{\text{SSR}}{\text{SST}}$$
+$$
+R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
+$$
 
 **Description:**
 - **R-squared ($R^2$)**, also known as the coefficient of determination, measures the proportion of the variance in the dependent variable ($y_{\text{true}}$) that is predictable from the independent variable(s) ($y_{\text{pred}}$) in a regression model.
