@@ -99,6 +99,7 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 $$
 \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_{\text{true},i} - y_{\text{pred},i} \right)^2
 $$
+
 **Description:**
 - **Mean Squared Error (MSE)** is a widely used metric for evaluating the accuracy of regression models.
 - It measures the average squared difference between the predicted values ($y_{\text{pred}}$) and the actual target values ($y_{\text{true}}$).
