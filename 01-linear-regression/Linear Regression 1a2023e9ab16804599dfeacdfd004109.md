@@ -17,8 +17,9 @@ w \leftarrow w - \alpha \frac{\partial J}{\partial w}
 $$
 
 $$
-\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} \left( y_{\text{true},i} - y_{\text{pred},i} \right)^2
 $$
+
 
 $$
 \text{RMSE} = \sqrt{\text{MSE}}
