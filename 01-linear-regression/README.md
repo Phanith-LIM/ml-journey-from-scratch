@@ -2,11 +2,13 @@
 
 Linear regression is a fundamental model in machine learning used for predicting a continuous output variable based on input features. The model function for linear regression is represented as:
 
-$$f_{w,b}(x) = wx + b$$
+$$
+f_{w,b}(x) = wx + b
+$$
 
-In this equation, $f_{w,b}(x)$ represents the predicted output, $w$ is the weight parameter, $b$ is the bias parameter, and $x$ is the input feature.
+In this equation, \( f_{w,b}(x) \) represents the predicted output, \( w \) is the weight parameter, \( b \) is the bias parameter, and \( x \) is the input feature.
 
-To train a linear regression model, we aim to find the best values for the parameters $(w, b)$ that best fit our dataset.
+To train a linear regression model, we aim to find the best values for the parameters \( (w, b) \) that best fit our dataset.
 
 ---
 
@@ -14,15 +16,17 @@ To train a linear regression model, we aim to find the best values for the param
 
 #### Forward Pass
 
-The forward pass is a step where we compute the linear regression output for the input data $X$ using the current weights and biases. It's essentially applying our model to the input data.
+The forward pass is a step where we compute the linear regression output for the input data \( X \) using the current weights and biases. It's essentially applying our model to the input data.
 
 #### Cost Function
 
 The cost function is used to measure how well our model is performing. It quantifies the difference between the predicted values and the actual values in our dataset. The cost function is defined as:
 
-$$J(w,b) = \frac{1}{2m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})^2$$
+$$
+J(w,b) = \frac{1}{2m} \sum_{i=1}^{m}(f_{w,b}(x^{(i)}) - y^{(i)})^2
+$$
 
-Here, $J(w, b)$ is the cost, $m$ is the number of training examples, $x^{(i)}$ is the input data for the $i$-th example, $y^{(i)}$ is the actual output for the $i$-th example, and $w$ and $b$ are the weight and bias parameters, respectively.
+Here, \( J(w, b) \) is the cost, \( m \) is the number of training examples, \( x^{(i)} \) is the input data for the \( i \)-th example, \( y^{(i)} \) is the actual output for the \( i \)-th example, and \( w \) and \( b \) are the weight and bias parameters, respectively.
 
 #### Backward Pass (Gradient Computation)
 
@@ -40,11 +44,15 @@ $$
 
 The training process involves iteratively updating the weights and biases to minimize the cost function. This is typically done through an optimization algorithm like gradient descent. The update equations for parameters are:
 
-$$w \leftarrow w - \alpha \frac{\partial J}{\partial w}$$
+$$
+w \leftarrow w - \alpha \frac{\partial J}{\partial w}
+$$
 
-$$b \leftarrow b - \alpha \frac{\partial J}{\partial b}$$
+$$
+b \leftarrow b - \alpha \frac{\partial J}{\partial b}
+$$
 
-Here, $\alpha$ represents the learning rate, which controls the step size during parameter updates.
+Here, \( \alpha \) represents the learning rate, which controls the step size during parameter updates.
 
 By iteratively performing the forward pass, computing the cost, performing the backward pass, and updating the parameters, the model learns to make better predictions and fit the data.
 
@@ -70,14 +78,16 @@ Standardization is a preprocessing technique used in machine learning to rescale
 
 The standardization process involves the following steps:
 
-1. Calculate the mean ($\mu$) and standard deviation ($\sigma$) for each feature in the dataset.
-2. For each data point (sample), subtract the mean ($\mu$) of the feature and then divide by the standard deviation ($\sigma$) of the feature.
+1. Calculate the mean (\( \mu \)) and standard deviation (\( \sigma \)) for each feature in the dataset.
+2. For each data point (sample), subtract the mean (\( \mu \)) of the feature and then divide by the standard deviation (\( \sigma \)) of the feature.
 
 Mathematically, the standardized value for a feature `x` in a dataset is calculated as:
 
-$$\text{Standardized value} = \frac{x - \mu}{\sigma}$$
+$$
+\text{Standardized value} = \frac{x - \mu}{\sigma}
+$$
 
-Here, `x` is the original value of the feature, $\mu$ is the mean of the feature, and $\sigma$ is the standard deviation of the feature.
+Here, `x` is the original value of the feature, \( \mu \) is the mean of the feature, and \( \sigma \) is the standard deviation of the feature.
 
 ---
 
@@ -86,11 +96,14 @@ Here, `x` is the original value of the feature, $\mu$ is the mean of the feature
 #### 1. Mean Squared Error (MSE)
 
 **Formula:**
-$$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2$$
+
+$$
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i})^2
+$$
 
 **Description:**
 - **Mean Squared Error (MSE)** is a widely used metric for evaluating the accuracy of regression models.
-- It measures the average squared difference between the predicted values ($y_{\text{pred}}$) and the actual target values ($y_{\text{true}}$).
+- It measures the average squared difference between the predicted values (\( y_{\text{pred}} \)) and the actual target values (\( y_{\text{true}} \)).
 - The squared differences are averaged across all data points in the dataset.
 
 **Interpretation:**
@@ -100,7 +113,10 @@ $$\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_{\text{true}_i} - y_{\text{pred}_i}
 #### 2. Root Mean Squared Error (RMSE)
 
 **Formula:**
-$$\text{RMSE} = \sqrt{\text{MSE}}$$
+
+$$
+\text{RMSE} = \sqrt{\text{MSE}}
+$$
 
 **Description:**
 - **Root Mean Squared Error (RMSE)** is a variant of MSE that provides the square root of the average squared difference between predicted and actual values.
@@ -110,15 +126,18 @@ $$\text{RMSE} = \sqrt{\text{MSE}}$$
 - Like MSE, a lower RMSE indicates a better fit of the model to the data.
 - RMSE is also sensitive to outliers due to the square root operation.
 
-#### 3. R-squared ($R^2$)
+#### 3. R-squared (\( R^2 \))
 
 **Formula:**
-$$R^2 = 1 - \frac{\text{SSR}}{\text{SST}}$$
+
+$$
+R^2 = 1 - \frac{\text{SSR}}{\text{SST}}
+$$
 
 **Description:**
-- **R-squared ($R^2$)**, also known as the coefficient of determination, measures the proportion of the variance in the dependent variable ($y_{\text{true}}$) that is predictable from the independent variable(s) ($y_{\text{pred}}$) in a regression model.
+- **R-squared (\( R^2 \))**, also known as the coefficient of determination, measures the proportion of the variance in the dependent variable (\( y_{\text{true}} \)) that is predictable from the independent variable(s) (\( y_{\text{pred}} \)) in a regression model.
 - It ranges from 0 to 1, where 0 indicates that the model does not explain any variance, and 1 indicates a perfect fit.
 
 **Interpretation:**
-- A higher $R^2$ value suggests that the model explains a larger proportion of the variance in the target variable.
-- However, $R^2$ does not provide information about the goodness of individual predictions or whether the model is overfitting or underfitting.
+- A higher \( R^2 \) value suggests that the model explains a larger proportion of the variance in the target variable.
+- However, \( R^2 \) does not provide information about the goodness of individual predictions or whether the model is overfitting or underfitting.
